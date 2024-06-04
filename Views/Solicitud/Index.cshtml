@@ -1,0 +1,113 @@
+@model IEnumerable<Fablab.Models.Entitys.Solicitud>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCoordinador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailCoordinador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventoNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventoOrganizador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventoLugar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventoFechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventoFechaFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PbjetivosEsperados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaSolicitud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentoJustificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentoRquerimientos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentoComvocatoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCoordinador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailCoordinador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventoNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventoOrganizador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventoLugar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventoFechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventoFechaFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PbjetivosEsperados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaSolicitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentoJustificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentoRquerimientos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentoComvocatoria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
